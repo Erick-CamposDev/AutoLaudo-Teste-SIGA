@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgb(3, 64, 156);
+  width: 100%;
+  height: 130px;
+  color: #fafafa;
+}
+
+header h1 {
+  margin: 1rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0 2rem;
+}
+
+footer {
+  color: #fafafa;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(4, 48, 116);
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+}
