@@ -1,11 +1,13 @@
 {
-  "name": "meu-projeto",
-  "version": "0.0.0",
+  "name": "teste-siga",
+  "version": "1.0.0",
+  "author": "Erick Campos",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "generate": "ng generate component",
     "test": "ng test"
   },
   "private": true,
