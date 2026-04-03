@@ -1,0 +1,51 @@
+.report-form {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  border: 2px solid #053f81;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #053f81;
+  padding: 1rem;
+  color: #fafafa;
+}
+
+.form-header button {
+  background: none;
+  border: none;
+}
+
+.form-header button img {
+  filter: invert(1);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.form-row2 {
+  display: flex;
+}
+
+label input {
+  width: 90%;
+  padding: 0.75rem;
+  font-size: 16px;
+}
+
+.form-row3 label textarea {
+  resize: none;
+  width: 90%;
+  height: 100px;
+  overflow-y: auto;
+  padding: 0.75rem;
+  font-size: 16px;
+}
