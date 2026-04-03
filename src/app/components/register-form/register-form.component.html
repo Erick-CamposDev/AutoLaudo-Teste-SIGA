@@ -5,17 +5,36 @@
   <div class="form">
     <form>
       <label>
-        <input type="radio" name="" />
+        <input
+          type="radio"
+          name="option"
+          value="automobiles"
+          [(ngModel)]="selectedType"
+        />
         <span>Automóveis</span>
       </label>
       <label>
-        <input type="radio" name="" />
+        <input
+          type="radio"
+          name="option"
+          value="trucks"
+          [(ngModel)]="selectedType"
+        />
         <span>Caminhões</span>
       </label>
       <label>
-        <input type="radio" name="" />
-        <span>Motos</span>
+        <input
+          type="radio"
+          name="option"
+          value="motorcycles"
+          [(ngModel)]="selectedType"
+        />
+        <span>Motocicletas</span>
       </label>
     </form>
   </div>
+  <div class="btn-container">
+    <button (click)="showReport()" class="report-btn">Conferir Laudo</button>
+  </div>
+  <app-error-messages [selectedType]="selectedType"></app-error-messages>
 </div>
