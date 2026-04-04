@@ -9,5 +9,10 @@ import { VehicleInformation } from 'src/app/models/VehicleInfo';
 export class TableChecklistComponent {
   @Input() vehicle: VehicleInformation[] = [];
 
-  setDamage() {}
+  setDamage(
+    rating: 'NA' | 'SEM DANOS' | 'DANIFICADA',
+    piece: (typeof this.vehicle)[number],
+  ) {
+    piece.rating = rating;
+  }
 }
