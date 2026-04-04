@@ -1,6 +1,16 @@
 <header><h1>AutoLaudo</h1></header>
 <main>
-  <app-register-form></app-register-form>
-  <app-main-report></app-main-report>
+  <app-register-form
+    (visibleReport)="visibleReport = $event"
+    (selectedVehicle)="selectedVehicle = $event"
+    (vehicleName)="vehicleName = $event"
+    (vehicleImages)="vehicleImages = $event"
+  ></app-register-form>
+  <app-main-report
+    *ngIf="visibleReport && selectedVehicle && vehicleName"
+    [selectedVehicle]="selectedVehicle"
+    [vehicleName]="vehicleName"
+    [vehicleImages]="vehicleImages"
+  ></app-main-report>
 </main>
 <footer>&copy; 2026. Erick Campos. Todos os direitos reservados.</footer>

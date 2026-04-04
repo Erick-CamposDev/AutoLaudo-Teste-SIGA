@@ -8,10 +8,17 @@ import { RegisterFormComponent } from './components/register-form/register-form.
 import { ErrorMessagesComponent } from './components/error-messages/error-messages.component';
 import { MainReportComponent } from './components/main-report/main-report.component';
 import { ReportFormComponent } from './components/report-form/report-form.component';
-import { ItemChecklistComponent } from './components/item-checklist/item-checklist.component';
+import { TableChecklistComponent } from './components/table-checklist/table-checklist.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterFormComponent, ErrorMessagesComponent, MainReportComponent, ReportFormComponent, ItemChecklistComponent],
+  declarations: [
+    AppComponent,
+    RegisterFormComponent,
+    ErrorMessagesComponent,
+    MainReportComponent,
+    ReportFormComponent,
+    TableChecklistComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

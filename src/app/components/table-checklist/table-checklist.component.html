@@ -9,9 +9,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><p>1</p></td>
-        <td><p>Peça name</p></td>
+      <tr *ngFor="let info of vehicle">
+        <td>
+          <p>{{ info.numberId }}</p>
+        </td>
+        <td>
+          <p>{{ info.pieceName }}</p>
+        </td>
         <td>???</td>
         <td class="table-btn"><button>Sem Danos</button></td>
         <td class="table-btn"><button>Peça Danificada</button></td>

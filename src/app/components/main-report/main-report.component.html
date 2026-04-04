@@ -34,8 +34,9 @@
   <div class="report-main">
     <div class="pmg-checklist">
       <div class="checklist-header">
-        <p>PMG PLACEHOLDER</p>
+        <p>PMG {{ vehicleName }}</p>
       </div>
+      <app-table-checklist [vehicle]="selectedVehicle"></app-table-checklist>
     </div>
     <div class="vehicle-imgs">
       <div class="img-container">
@@ -45,7 +46,9 @@
             <img src="assets/imgs/chevron-up.svg" alt="Visualizar imagem." />
           </button>
         </div>
-        <div class="image"></div>
+        <div class="image">
+          <img [src]="vehicleImages[0].url" [alt]="vehicleImages[0].alt" />
+        </div>
       </div>
       <div class="img-container">
         <div class="img-header">
@@ -54,7 +57,9 @@
             <img src="assets/imgs/chevron-up.svg" alt="Visualizar imagem." />
           </button>
         </div>
-        <div class="image"></div>
+        <div class="image">
+          <img [src]="vehicleImages[1].url" [alt]="vehicleImages[1].alt" />
+        </div>
       </div>
     </div>
   </div>

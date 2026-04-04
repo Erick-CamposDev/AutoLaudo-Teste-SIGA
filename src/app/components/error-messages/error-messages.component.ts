@@ -12,8 +12,9 @@ export class ErrorMessagesComponent {
   validRadioCheck() {
     if (!this.selectedType) {
       this.radioError = true;
-    } else {
-      this.radioError = false;
+      return false;
     }
+    this.radioError = false;
+    return true;
   }
 }

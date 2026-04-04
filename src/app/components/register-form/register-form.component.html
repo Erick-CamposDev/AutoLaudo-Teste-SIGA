@@ -34,7 +34,9 @@
     </form>
   </div>
   <div class="btn-container">
-    <button (click)="showReport()" class="report-btn">Conferir Laudo</button>
+    <button (click)="showReport(selectedType)" class="report-btn">
+      Conferir Laudo
+    </button>
   </div>
   <app-error-messages [selectedType]="selectedType"></app-error-messages>
 </div>
