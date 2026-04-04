@@ -17,9 +17,15 @@
           <p>{{ info.pieceName }}</p>
         </td>
         <td>???</td>
-        <td class="table-btn"><button>Sem Danos</button></td>
-        <td class="table-btn"><button>Peça Danificada</button></td>
-        <td class="table-btn"><button>Não Avaliada</button></td>
+        <td class="table-btn">
+          <button (click)="setDamage()">Sem Danos</button>
+        </td>
+        <td class="table-btn">
+          <button (click)="setDamage()">Peça Danificada</button>
+        </td>
+        <td class="table-btn">
+          <button (click)="setDamage()">Não Avaliada</button>
+        </td>
       </tr>
     </tbody>
   </table>

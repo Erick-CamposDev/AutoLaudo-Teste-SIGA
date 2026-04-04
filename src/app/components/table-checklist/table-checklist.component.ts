@@ -8,4 +8,6 @@ import { VehicleInformation } from 'src/app/models/VehicleInfo';
 })
 export class TableChecklistComponent {
   @Input() vehicle: VehicleInformation[] = [];
+
+  setDamage() {}
 }
