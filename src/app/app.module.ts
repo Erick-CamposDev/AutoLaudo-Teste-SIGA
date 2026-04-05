@@ -9,6 +9,7 @@ import { ErrorMessagesComponent } from './components/error-messages/error-messag
 import { MainReportComponent } from './components/main-report/main-report.component';
 import { ReportFormComponent } from './components/report-form/report-form.component';
 import { TableChecklistComponent } from './components/table-checklist/table-checklist.component';
+import { ReportTableComponent } from './components/report-table/report-table.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TableChecklistComponent } from './components/table-checklist/table-chec
     MainReportComponent,
     ReportFormComponent,
     TableChecklistComponent,
+    ReportTableComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

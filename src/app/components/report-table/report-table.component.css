@@ -1,0 +1,97 @@
+.report-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80vw;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border: 2px solid #0a0a0a;
+}
+
+.report-title h2 {
+  font-size: 20px;
+}
+
+.table-container {
+  margin: 1.5rem 0 1.5rem;
+  width: 90%;
+  border: 2px solid #0a0a0a;
+  height: 700px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  width: 100%;
+}
+
+.td-upper {
+  width: 50%;
+}
+
+.td-title {
+  font-weight: 700;
+}
+
+.td-title,
+.td-subtitle {
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+.td-subtitle {
+  padding-bottom: 1.5rem;
+}
+
+th,
+td {
+  border: 1px solid #0a0a0a;
+}
+
+.td-upper {
+  padding: 0 0 0 0.35rem;
+}
+
+.null-td {
+  border: none;
+}
+
+.rating-td {
+  width: 40%;
+}
+
+.item-td {
+  width: 2%;
+}
+
+.piece-name-td {
+  width: 25%;
+}
+
+.rating-rank-td {
+  width: 1%;
+}
+
+.rating-rank-td,
+.rating-td,
+.item-td {
+  text-align: center;
+}
+
+.item-td,
+.piece-name-td,
+.rating-rank-td,
+.rating-td {
+  border: 2px solid #0a0a0a;
+  font-weight: 700;
+}
+
+.item-name-td {
+  font-size: 14px;
+  border: 2px solid #0a0a0a;
+}
