@@ -19,21 +19,27 @@
           <td colspan="6" class="td-upper">Placa:</td>
         </tr>
         <tr>
-          <td colspan="6" class="td-upper">Nome do perito:</td>
-          <td colspan="6" class="td-upper">N° BOAT:</td>
+          <td colspan="6" class="td-upper">
+            Nome do perito: {{ formData.agentName }}
+          </td>
+          <td colspan="6" class="td-upper">
+            N° BOAT: {{ formData.agentNumber }}
+          </td>
         </tr>
         <tr>
-          <td colspan="6" class="td-upper">Registro/Matrícula do agente:</td>
+          <td colspan="6" class="td-upper">
+            Registro/Matrícula do agente: {{ formData.register }}
+          </td>
           <td colspan="6" class="td-upper">Data:</td>
         </tr>
         <tr>
           <td class="td-title" colspan="10">
-            AUTOMÓVEIS, CAMIONETAS E CAMIONETES
+            {{ vehicleRating.title }}
           </td>
         </tr>
         <tr>
           <td class="td-subtitle" colspan="10">
-            PEÇAS ESTRUTURAIS/SEGURANÇAS PASSIVA AVARIADAS NO ACIDENTE
+            {{ vehicleRating.subtitle }}
           </td>
         </tr>
         <tr>
@@ -55,17 +61,54 @@
           <td class="rating-rank-td">NÃO</td>
           <td class="rating-rank-td">NA</td>
         </tr>
-        <tr class="tr-infos">
-          <td class="item-td"></td>
-          <td class="item-name-td"></td>
-          <td class="rating-rank-td"></td>
-          <td class="rating-rank-td"></td>
-          <td class="rating-rank-td"></td>
-          <td class="item-td"></td>
-          <td class="item-name-td"></td>
-          <td class="rating-rank-td"></td>
-          <td class="rating-rank-td"></td>
-          <td class="rating-rank-td"></td>
+        <tr class="tr-infos" *ngFor="let item of leftItems; let i = index">
+          <td class="item-td">{{ item.numberId }}</td>
+          <td class="item-name-td">{{ item.pieceName }}</td>
+          <td class="rating-rank-td">
+            {{ item.rating === "DANIFICADA" ? "X" : "" }}
+          </td>
+          <td class="rating-rank-td">
+            {{ item.rating === "SEM DANOS" ? "X" : "" }}
+          </td>
+          <td class="rating-rank-td">
+            {{ item.rating === "NA" ? "X" : "" }}
+          </td>
+          <td class="item-td">{{ rightItems[i].numberId }}</td>
+          <td class="item-name-td">{{ rightItems[i].pieceName }}</td>
+          <td class="rating-rank-td">
+            {{ rightItems[i].rating === "DANIFICADA" ? "X" : "" }}
+          </td>
+          <td class="rating-rank-td">
+            {{ rightItems[i].rating === "SEM DANOS" ? "X" : "" }}
+          </td>
+          <td class="rating-rank-td">
+            {{ rightItems[i].rating === "NA" ? "X" : "" }}
+          </td>
+        </tr>
+        <tr>
+          <td class="null-td" colspan="6"></td>
+          <td>TOTAL GERAL (SIM E NA)</td>
+          <td class="final-rating" colspan="3">0</td>
+        </tr>
+        <tr>
+          <td class="observation-td" colspan="10">
+            Observações: {{ formData.observation }}
+          </td>
+        </tr>
+        <tr class="rating-title">
+          <td colspan="10">AVALIAÇÃO DO DANO</td>
+        </tr>
+        <tr class="rating-info">
+          <td colspan="5">{{ vehicleRating.ratings.rating1 }}</td>
+          <td colspan="5">-> DANO DE PEQUENA MONTA</td>
+        </tr>
+        <tr class="rating-info">
+          <td colspan="5">{{ vehicleRating.ratings.rating2 }}</td>
+          <td colspan="5">-> DANO DE MÉDIA MONTA</td>
+        </tr>
+        <tr class="rating-info">
+          <td colspan="5">{{ vehicleRating.ratings.rating3 }}</td>
+          <td colspan="5">-> DANO DE GRANDE MONTA</td>
         </tr>
       </tbody>
     </table>
