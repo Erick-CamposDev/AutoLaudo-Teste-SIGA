@@ -18,15 +18,28 @@
         </td>
         <td>???</td>
         <td class="table-btn">
-          <button (click)="setDamage('SEM DANOS', info)">Sem Danos</button>
-        </td>
-        <td class="table-btn">
-          <button (click)="setDamage('DANIFICADA', info)">
-            Peça Danificada
+          <button
+            [class.active]="info.rating === 'NA'"
+            (click)="setDamage('NA', info)"
+          >
+            Não Avaliada
           </button>
         </td>
         <td class="table-btn">
-          <button (click)="setDamage('NA', info)">Não Avaliada</button>
+          <button
+            [class.active]="info.rating === 'SEM DANOS'"
+            (click)="setDamage('SEM DANOS', info)"
+          >
+            Sem Danos
+          </button>
+        </td>
+        <td class="table-btn">
+          <button
+            [class.active]="info.rating === 'DANIFICADA'"
+            (click)="setDamage('DANIFICADA', info)"
+          >
+            Peça Danificada
+          </button>
         </td>
       </tr>
     </tbody>

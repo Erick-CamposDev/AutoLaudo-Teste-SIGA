@@ -25,11 +25,18 @@
 }
 
 .form {
+  height: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   gap: 1rem;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.form.big {
+  height: auto;
+  padding: 1rem;
 }
 
 .form-row2 {

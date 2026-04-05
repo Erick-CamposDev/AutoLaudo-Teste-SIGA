@@ -1,20 +1,21 @@
 <div class="report-form">
   <div class="form-header">
     <p>Informações adicionais e observações</p>
-    <button>
+    <button (click)="toggleBtn()">
       <img
         src="assets/imgs/chevron-up.svg"
         alt="Abrir formulario de Informações adicionais"
       />
     </button>
   </div>
-  <form class="form">
+  <form class="form" [class.big]="btnState">
     <div class="form-row1">
       <label
         ><p>Nome do agente</p>
         <input
           type="text"
           name="agentName"
+          [(ngModel)]="agentName"
           placeholder="Digite o nome do agente"
       /></label>
     </div>
@@ -24,6 +25,7 @@
         <input
           type="text"
           name="agentRegister"
+          [(ngModel)]="register"
           placeholder="Digite o registro do agente"
         />
       </label>
@@ -32,6 +34,7 @@
         <input
           type="text"
           name="accidentNumber"
+          [(ngModel)]="agentNumber"
           placeholder="Digite o número de acidente"
         />
       </label>
@@ -41,6 +44,7 @@
         <p>Observação</p>
         <textarea
           name="obsevartion"
+          [(ngModel)]="observation"
           placeholder="Digite sua observação"
         ></textarea>
       </label>

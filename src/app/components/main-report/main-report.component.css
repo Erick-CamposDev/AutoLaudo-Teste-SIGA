@@ -133,7 +133,16 @@
 }
 
 .image {
-  height: 250px;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.image.big {
+  height: 200px;
+}
+
+.image.big2 {
+  height: 200px;
 }
 
 .image img {

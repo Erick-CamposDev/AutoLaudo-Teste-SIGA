@@ -12,4 +12,14 @@ export class AppComponent {
   selectedVehicle: any;
   vehicleName: string = '';
   vehicleImages: any;
+  vehicleInfo: any;
+  vehicleRating: any;
+  formData: any;
+  reportActive: boolean = false;
+  closeReportEmit!: boolean;
+
+  closeAll() {
+    this.reportActive = false;
+    this.visibleReport = false;
+  }
 }

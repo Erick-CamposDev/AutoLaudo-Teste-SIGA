@@ -5,13 +5,25 @@
     (selectedVehicle)="selectedVehicle = $event"
     (vehicleName)="vehicleName = $event"
     (vehicleImages)="vehicleImages = $event"
+    (vehicleRating)="vehicleRating = $event"
+    (reportActive)="reportActive = $event"
   ></app-register-form>
   <app-main-report
     *ngIf="visibleReport && selectedVehicle && vehicleName"
+    (closeReportEmit)="closeAll()"
+    (selectedVehicleInfo)="vehicleInfo = $event"
+    (reportActive)="reportActive = $event"
+    (formDataEmit)="formData = $event"
+    [visibleReport]="visibleReport"
     [selectedVehicle]="selectedVehicle"
     [vehicleName]="vehicleName"
     [vehicleImages]="vehicleImages"
   ></app-main-report>
-  <app-report-table></app-report-table>
+  <app-report-table
+    *ngIf="reportActive && vehicleInfo && formData"
+    [vehicleInfo]="vehicleInfo"
+    [vehicleRating]="vehicleRating"
+    [formData]="formData"
+  ></app-report-table>
 </main>
 <footer>&copy; 2026. Erick Campos. Todos os direitos reservados.</footer>

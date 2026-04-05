@@ -1,8 +1,8 @@
-<section class="report-container">
+<section class="report-container" *ngIf="visibleReport">
   <div class="report-header">
     <div class="header">
       <p>LAUDO PMG</p>
-      <button>
+      <button (click)="closeReport()">
         <img src="assets/imgs/x-lg.svg" alt="Sair do menu de Laudo" />
       </button>
     </div>
@@ -42,36 +42,36 @@
       <div class="img-container">
         <div class="img-header">
           <p>Imagem 1</p>
-          <button>
+          <button (click)="toggleBtn(0)">
             <img src="assets/imgs/chevron-up.svg" alt="Visualizar imagem." />
           </button>
         </div>
-        <div class="image">
+        <div class="image" [class.big]="btnsStates[0]">
           <img [src]="vehicleImages[0].url" [alt]="vehicleImages[0].alt" />
         </div>
       </div>
       <div class="img-container">
         <div class="img-header">
           <p>Imagem 2</p>
-          <button>
+          <button (click)="toggleBtn(1)">
             <img src="assets/imgs/chevron-up.svg" alt="Visualizar imagem." />
           </button>
         </div>
-        <div class="image">
+        <div class="image" [class.big2]="btnsStates[1]">
           <img [src]="vehicleImages[1].url" [alt]="vehicleImages[1].alt" />
         </div>
       </div>
     </div>
   </div>
-  <app-report-form></app-report-form>
+  <app-report-form (fieldValues)="receiveValues($event)"></app-report-form>
   <div class="report-footer">
-    <button class="btn-pmg">
+    <button class="btn-pmg" (click)="generateReport()">
       <img
         src="assets/imgs/floppy-fill.svg"
         alt="Botão para gerar relatório"
       />Relatório PMG
     </button>
-    <button class="btn-confirm">
+    <button class="btn-confirm" (click)="closeReport()">
       <img
         src="assets/imgs/check-lg.svg"
         alt="Botão para confirmar suas informações"
