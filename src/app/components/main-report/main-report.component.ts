@@ -14,34 +14,36 @@ import { VehicleInformation } from 'src/app/models/VehicleInfo';
   styleUrls: ['./main-report.component.css'],
 })
 export class MainReportComponent {
-  @Input() selectedVehicle: any;
-  @Input() vehicleName: string = '';
-  @Input() vehicleImages: any;
-  @Input() visibleReport!: boolean;
-  @ViewChild(ReportFormComponent) reportForm!: ReportFormComponent;
+  @Input() selectedVehicle: any; //Interface do Veiculo com os dados selcionados
+  @Input() vehicleName: string = ''; // Nome do Veículo
+  @Input() vehicleImages: any; // Imagens do Veículo
+  @Input() visibleReport!: boolean; // Verificação se o Laudo está aberto ou não
+  @ViewChild(ReportFormComponent) reportForm!: ReportFormComponent; // Pegando método receiveValues() do componente filho
 
-  @Output() selectedVehicleInfo = new EventEmitter<any>();
-  @Output() reportActive = new EventEmitter<boolean>();
-  @Output() formDataEmit = new EventEmitter<any>();
-  @Output() closeReportEmit = new EventEmitter<any>();
+  @Output() selectedVehicleInfo = new EventEmitter<any>(); // interface do veículo para ser mandado para o componente pai
+  @Output() reportActive = new EventEmitter<boolean>(); // Verificação para saber se o relatório está ativo ou não
+  @Output() formDataEmit = new EventEmitter<any>(); // Evento para mandar os dados do formulario para o relatório
+  @Output() closeReportEmit = new EventEmitter<any>(); // Evento para fechar o laudo + relatório
 
   formValues: any;
 
   btnsStates: boolean[] = [false, false];
 
   toggleBtn(index: number) {
-    this.btnsStates[index] = !this.btnsStates[index];
+    this.btnsStates[index] = !this.btnsStates[index]; //Função para fechar divs com imagem
   }
 
   closeReport() {
-    this.closeReportEmit.emit(false);
+    this.closeReportEmit.emit(false); // Função para fechar o laudo + Relatório
   }
 
   receiveValues(data: any) {
+    // Função para receber os valores do formulario
     this.formValues = data;
   }
 
   generateJSON() {
+    // Função para geração do JSON
     const json = this.selectedVehicle.map((e: VehicleInformation) => ({
       number: e.numberId,
       piece: e.pieceName,
@@ -53,6 +55,7 @@ export class MainReportComponent {
   }
 
   generateReport() {
+    // Função para gerar o relatório
     this.generateJSON();
     this.reportForm.receiveValues();
 

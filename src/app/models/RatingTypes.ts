@@ -1,5 +1,7 @@
 import { VehicleModel } from './VehicleModelRating';
 
+//CONSTANTES BASEADAS NA INTERFACE VehicleModel PARA GUARDAR AS AVALIAÇÕES
+
 export const MOTORCYCLE_RATING: VehicleModel = {
   title: 'MOTOCICLETAS',
   subtitle: 'PEÇAS ESTRUTURAIS AVARIADAS NO ACIDENTE',

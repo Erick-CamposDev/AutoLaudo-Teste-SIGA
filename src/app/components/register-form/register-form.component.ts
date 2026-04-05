@@ -31,16 +31,19 @@ import {
   styleUrls: ['./register-form.component.css'],
 })
 export class RegisterFormComponent {
-  selectedType: string = '';
-  @Output() visibleReport = new EventEmitter<boolean>();
-  @Output() selectedVehicle = new EventEmitter<VehicleInformation[]>();
-  @Output() vehicleName = new EventEmitter<string>();
-  @Output() vehicleImages = new EventEmitter<VehicleImages[]>();
-  @Output() reportActive = new EventEmitter<boolean>();
-  @Output() vehicleRating = new EventEmitter<VehicleModel>();
-  @ViewChild(ErrorMessagesComponent) errorMessages!: ErrorMessagesComponent;
+  selectedType: string = ''; //Verifica o valor do botão selecionado e atribui. Ex: Caminhão, Moto e Automovel.
+  @Output() visibleReport = new EventEmitter<boolean>(); // Evento de verificação para saber se o laudo está aberto.
+  @Output() selectedVehicle = new EventEmitter<VehicleInformation[]>(); // Pega os valores da interface VehicleInfo.
+  @Output() vehicleName = new EventEmitter<string>(); // Pega o nome do veículo selecionado
+  @Output() vehicleImages = new EventEmitter<VehicleImages[]>(); // Pega as imagens do veículo selecionado
+  @Output() reportActive = new EventEmitter<boolean>(); // Verifica se o relatorio está aberto
+  @Output() vehicleRating = new EventEmitter<VehicleModel>(); // Pega os dados das avaliações do veículo
+  @ViewChild(ErrorMessagesComponent) errorMessages!: ErrorMessagesComponent; // Pega método validRadioCheck()
 
   showReport(type: string) {
+    /* Função que mostra o laudo com base no parametro, ele seleciona uma das tres opções principais e atribui cada 
+    com validações
+    */
     const isValid = this.errorMessages.validRadioCheck();
     let selected;
     let images;
@@ -48,13 +51,16 @@ export class RegisterFormComponent {
     let ratingModel;
 
     if (isValid) {
-      this.visibleReport.emit(true);
-      this.reportActive.emit(false);
+      // Verifica se um dos botões foram selecionados
+      this.visibleReport.emit(true); // Abre o laudo
+      this.reportActive.emit(false); // Fecha relatorio e laudo após clicar um dos botões para sair
     } else {
       return;
     }
 
-    switch (type) {
+    switch (
+      type // Switch case usado para atribuir os dados de cada veículo
+    ) {
       case 'trucks':
         name = 'Caminhão';
         selected = TRUCK_INFO;

@@ -10,6 +10,7 @@ export class ErrorMessagesComponent {
   radioError: boolean = false;
 
   validRadioCheck() {
+    // Função para validar se um dos botões foram selecionados...
     if (!this.selectedType) {
       this.radioError = true;
       return false;

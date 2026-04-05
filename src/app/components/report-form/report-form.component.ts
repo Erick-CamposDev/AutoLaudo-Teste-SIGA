@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./report-form.component.css'],
 })
 export class ReportFormComponent {
-  @Output() fieldValues = new EventEmitter<any>();
+  @Output() fieldValues = new EventEmitter<any>(); //Evento para guardar os dados do formulario
   agentName: string = '';
   register: string = '';
   agentNumber: string = '';
@@ -15,10 +15,12 @@ export class ReportFormComponent {
   btnState: boolean = false;
 
   toggleBtn() {
+    // Função para abrir e fechar formulario
     this.btnState = !this.btnState;
   }
 
   receiveValues() {
+    //Recebe os valores e guarda eles em um objeto
     this.fieldValues.emit({
       agentName: this.agentName,
       register: this.register,
@@ -29,6 +31,7 @@ export class ReportFormComponent {
   }
 
   clean() {
+    //Limpa o formulario depois de clicar no botão
     this.agentName = '';
     this.register = '';
     this.agentNumber = '';

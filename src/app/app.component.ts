@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'meu-projeto';
+  title = 'teste-siga';
 
   visibleReport: boolean = false;
   selectedVehicle: any;
@@ -19,6 +19,7 @@ export class AppComponent {
   closeReportEmit!: boolean;
 
   closeAll() {
+    // Função para fechar ambos o laudo e relatório
     this.reportActive = false;
     this.visibleReport = false;
   }

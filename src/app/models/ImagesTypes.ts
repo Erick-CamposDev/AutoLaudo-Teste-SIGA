@@ -1,5 +1,7 @@
 import { VehicleImages } from './VehicleImgs';
 
+//CONSTANTES BASEADAS NA INTERFACE VehicleImages PARA GUARDAR AS IMAGENS DOS TRÊS VEICULOS PRINCIPAIS
+
 export const TRUCK_IMAGES: VehicleImages[] = [
   {
     url: 'assets/imgs/truck1.jpg',

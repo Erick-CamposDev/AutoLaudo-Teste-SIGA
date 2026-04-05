@@ -1,5 +1,7 @@
 import { VehicleInformation } from './VehicleInfo';
 
+//CONSTANTES BASEADAS NA INTERFACE VehicleInformation DIVIDAS NOS TRES VEICULOS PRINCIPAIS
+
 export const TRUCK_INFO: VehicleInformation[] = [
   {
     numberId: 1,

@@ -8,7 +8,7 @@ import { VehicleInformation } from 'src/app/models/VehicleInfo';
 })
 export class TableChecklistComponent {
   @Input() vehicle: VehicleInformation[] = [];
-
+  //Função para setar avaliação e guardar o valor no botão
   setDamage(
     rating: 'NA' | 'SEM DANOS' | 'DANIFICADA',
     piece: (typeof this.vehicle)[number],
