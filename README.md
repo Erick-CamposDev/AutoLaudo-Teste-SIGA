@@ -162,25 +162,25 @@ export interface VehicleRating {
 ## 📷 Demonstrações
 
 <div align="center">
-   <img src="src/assets/imgs/final-project-img1.jpg" alt="Imagem do menu com as opções de veículos" width="200px">
+   <img src="src/assets/imgs/final-project-img1.jpg" alt="Imagem do menu com as opções de veículos" width="500px" height="500px">
 </div>
 
 ---
 
 <div align="center">
-   <img src="src/assets/imgs/final-project-img2.jpg" alt="Imagem do laudo com a checklist de danos veiculares" width="200px">
+   <img src="src/assets/imgs/final-project-img2.jpg" alt="Imagem do laudo com a checklist de danos veiculares" width="500px" height="500px">
 </div>
 
 ---
 
 <div align="center">
-   <img src="src/assets/imgs/final-project-img3.jpg" alt="Imagem do formulário adicional" width="200px">
+   <img src="src/assets/imgs/final-project-img3.jpg" alt="Imagem do formulário adicional" width="500px" height="500px">
 </div>
 
 ---
 
 <div align="center">
-   <img src="src/assets/imgs/final-project-img4.jpg" alt="Imagem do relatório final" width="200px">
+   <img src="src/assets/imgs/final-project-img4.jpg" alt="Imagem do relatório final" width="500px" height="500px">
 </div>
 
 ---
