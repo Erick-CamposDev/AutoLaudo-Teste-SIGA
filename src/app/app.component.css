@@ -1,6 +1,6 @@
 header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background: rgb(3, 64, 156);
   width: 100%;
@@ -10,6 +10,7 @@ header {
 
 header h1 {
   margin: 1rem;
+  text-align: center;
 }
 
 main {
