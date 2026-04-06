@@ -48,7 +48,7 @@ Diferenciais do projeto:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/auto-laudo.git
+git clone https://github.com/usuario/AutoLaudo-Teste-SIGA.git
 cd auto-laudo
 ```
 
