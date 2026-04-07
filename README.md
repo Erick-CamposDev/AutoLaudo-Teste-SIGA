@@ -21,7 +21,7 @@ Diferenciais do projeto:
 - Checklist de avaliação detalhado para cada tipo de veículo
 - Laudos automáticos com classificação de danos
 - Exportação de dados estruturados em JSON
-- Interface responsiva adaptada para múltiplos dispositivos
+- Interface responsiva adaptada para múltiplos dispositivos (Em Desenvolvimento)
 
 ---
 
